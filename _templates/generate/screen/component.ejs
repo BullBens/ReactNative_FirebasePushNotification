@@ -1,0 +1,35 @@
+---
+to: src/screens/<%=h.changeCase.pascal(name)%>/<%=h.changeCase.pascal(name)%>.tsx
+---
+import React from 'react'
+import { useEffect, useCallback, useMemo, useTranslation, useRequest, useState } from '@hooks'
+import { View, Text } from '@components'
+import { StackNavigationProp, RouteProp, TScreenParams } from '@typings'
+import styles from './styles'
+
+const <%= h.changeCase.pascal(name) %>: React.FC<TProps> = () => {
+	// <%= h.changeCase.pascal(name) %> screen data.
+	const { t } = useTranslation()
+	const { params } = useRoute<TProps["route"]>()
+
+	// .
+	// const { data: myData, fetching, fetched } = useRequest<[], void>({
+	// 	request: api.getSomething(),
+	// 	onError: (error) => alert.error(error)
+	// })
+	// const [_, set_] = useGlobal('something')
+	// const callSomething = useDispatch('callSomething')
+
+	return (
+		<View style={styles.container}>
+			<Text><%= h.changeCase.pascal(name) %>Screen</Text>
+		</View>
+	)
+}
+
+export default <%= h.changeCase.pascal(name) %>;
+
+type TProps = {
+	navigation: StackNavigationProp<TScreenParams, '<%= h.changeCase.pascal(name) %>'>
+	route: RouteProp<TScreenParams, '<%= h.changeCase.pascal(name) %>'>
+}

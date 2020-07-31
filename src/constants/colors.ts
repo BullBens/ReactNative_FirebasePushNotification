@@ -1,0 +1,15 @@
+export const colors = {
+  gray_4F4E53: '#4F4E53',
+  gray_979797: '#979797',
+  gray_EFEFEF: '#EFEFEF',
+  gray_E4E4E4: '#E4E4E4',
+  gray_DADADA: '#DADADA',
+  gray_A0A3A8: '#A0A3A8',
+  gray_D7D7D7: '#D7D7D7',
+  gray_585A60: '#585A60',
+  white_FFFFFF: '#FFFFFF',
+  FFFFFF_02: 'rgba(255, 255, 255, 0.2)',
+  black_087: 'rgba(0, 0, 0, 0.87)',
+  yellow_FFD700: '#FFD700',
+  red_E50003: '#E50003',
+};

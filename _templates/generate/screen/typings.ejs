@@ -1,0 +1,7 @@
+---
+inject: true
+to: src/types/navigation.ts
+after: export type TScreenParams
+skip_if: <%= h.changeCase.pascal(name) %>
+---
+	<%= h.changeCase.pascal(name) %>: {}

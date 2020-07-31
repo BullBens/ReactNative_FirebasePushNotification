@@ -1,0 +1,107 @@
+{
+  "name": "ReactNativePushNotification",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "release": "npx react-native run-android --variant=release",
+    "ios:7": "react-native run-ios --simulator=\"iPhone 7\"",
+    "ios:5": "react-native run-ios --simulator=\"iPhone 5s\"",
+    "emulator:1": "~/Library/Android/sdk/tools/emulator -avd Pixel_API_27",
+    "emulator:2": "~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_27",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "pod:clean": "cd ios && pod deintegrate && pod install && cd ../",
+    "postinstall": "npm run pod:clean",
+    "watchman": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache verify && npm install && npm start -- --reset-cache",
+    "g:screen": "hygen generate screen",
+    "g:reducer": "hygen generate reducer",
+    "g:component": "hygen generate component",
+    "g:screen-component": "hygen generate screen-component"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.9.0",
+    "@react-native-community/google-signin": "^4.0.3",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/toolbar-android": "0.1.0-rc.2",
+    "@react-native-firebase/app": "^8.0.1",
+    "@react-native-firebase/auth": "^8.1.1",
+    "@react-native-firebase/firestore": "^7.2.4",
+    "@react-native-firebase/messaging": "^7.3.2",
+    "@react-navigation/bottom-tabs": "^5.5.2",
+    "@react-navigation/drawer": "^5.7.2",
+    "@react-navigation/native": "^5.1.7",
+    "@react-navigation/stack": "^5.2.14",
+    "axios": "^0.19.2",
+    "i18next": "^19.4.4",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "react": "16.11.0",
+    "react-i18next": "^11.4.0",
+    "react-native": "0.62.2",
+    "react-native-fast-image": "^8.1.5",
+    "react-native-gesture-handler": "1.6.1",
+    "react-native-image-picker": "^2.3.1",
+    "react-native-iphone-x-helper": "^1.2.1",
+    "react-native-modal": "^11.5.6",
+    "react-native-reanimated": "1.8.0",
+    "react-native-safe-area-context": "0.7.3",
+    "react-native-screens": "2.7.0",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-swipe-gestures": "^1.0.5",
+    "react-native-vector-icons": "^6.7.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@react-native-community/eslint-config": "^1.0.0",
+    "@types/jest": "^24.0.24",
+    "@types/lodash": "^4.14.121",
+    "@types/react-native": "^0.62.0",
+    "@types/react-native-snap-carousel": "^3.8.1",
+    "@types/react-native-vector-icons": "^6.4.5",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-test-renderer": "16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.5.1",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "prettier": "^2.0.4",
+    "react-test-renderer": "16.11.0",
+    "redux-devtools-extension": "^2.13.8",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
